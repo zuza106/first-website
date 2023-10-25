@@ -1,0 +1,13 @@
+.textMain {
+    color: hsl(0, 2%, 10%);
+    background-color: bisque;
+}
+
+.textMain__cytat {
+    font-weight: bold;
+
+}
+
+.textMain--color {
+    background-color: rgb(205, 243, 214);
+}

@@ -1,0 +1,36 @@
+.table {
+    border-collapse: collapse;
+    border: 3px solid rgb(40, 134, 103);
+    margin: 50px auto;
+    width: 100%;
+}
+
+.table__cell {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgb(40, 134, 103);
+}
+
+.table__cell:hover {
+    background-color: rgb(40, 134, 103);
+}
+
+.table__themeCell {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgb(40, 134, 103);
+    background-color: bisque;
+}
+
+.table__numberCell {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgb(40, 134, 103);
+    background-color: rgb(40, 134, 103);
+}
+
+.table__caption {
+    padding: 10px;
+    color: rgb(180, 73, 100);
+    font-size: x-large;
+}
