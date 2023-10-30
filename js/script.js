@@ -1,22 +1,37 @@
-console.log("Cześć! To moja pierwsza wiadomość.");
 
-let button = document.querySelector(".button");
-let secondButton = document.querySelector(".secondButton");
-let mainColorTwo = document.querySelector(".mainColorTwo");
-let secondText = document.querySelector(".secondText");
+{
+    const welcome = () => {
+        console.log("Cześć! To moja pierwsza wiadomość.");
+    }
+
+    const removeTextButton = () => {
+        const welcomeText = document.querySelector(".js-welcomeText");
+        welcomeText.remove();
+    }
 
 
 
-button.addEventListener("click", () => {
-    mainColorTwo.remove();
-});
-
-secondButton.addEventListener("click", () => {
-    secondButton.innerText =
-        secondText.innerText === "Moje hobby"
+    const changeTextButton = () => {
+        const secondButton = document.querySelector(".js-secondButton");
+        const secondText = document.querySelector(".js-secondText");
+        secondButton.innerText = secondText.innerText === "Moje hobby"
             ? "Zmień tekst nagłówka"
             : "Zmień tekst ponownie";
+    }
 
-    secondText.innerText =
-        secondText.innerText === "Moje hobby" ? "Moje pasje" : "Moje hobby";
-});
+    const changeText = () => {
+        secondText.innerText = secondText.innerText === "Moje hobby" ? "Moje pasje" : "Moje hobby";
+
+    }
+
+    const init = () => {
+        const button = document.querySelector(".js-button");
+        removeTextButton.addEventListener("click")
+        secondButton.addEventListener("click", changeTextButton, changeText)
+
+
+        welcome();
+    }
+
+    init();
+}
