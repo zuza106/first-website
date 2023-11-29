@@ -11,14 +11,13 @@
         secondText.innerText = secondText.innerText === "Moje hobby" ? "Moje pasje" : "Moje hobby";
 
     }
-    const changeTextButton = (changeText) => {
-        const secondButton = document.querySelector(".js-secondButton");
+    const changeTextButton = (secondButton) => {
         secondButton.innerText = changeText.innerText === "Moje hobby"
             ? "Zmień tekst nagłówka"
             : "Zmień tekst ponownie";
     }
 
-    
+
 
     const removeWelcomeText = () => {
         const welcomeText = document.querySelector(".js-welcomeText");
@@ -27,9 +26,14 @@
 
     const init = () => {
         const button = document.querySelector(".js-button");
+        const secondButton = document.querySelector(".js-secondButton");
 
         button.addEventListener("click", removeWelcomeText);
-        secondButton.addEventListener("click", changeTextButton, changeText)
+        secondButton.addEventListener("click", () => {
+            changeTextButton(secondButton);
+            changeText();
+        });
+
 
 
         welcome();
