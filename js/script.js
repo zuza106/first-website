@@ -11,7 +11,7 @@
         secondText.innerText = secondText.innerText === "Moje hobby" ? "Moje pasje" : "Moje hobby";
 
     }
-    const changeTextButton = (secondButton) => {
+    const toggleButtonText = (secondButton) => {
         secondButton.innerText = changeText.innerText === "Moje hobby"
             ? "Zmień tekst nagłówka"
             : "Zmień tekst ponownie";
@@ -24,17 +24,20 @@
         welcomeText.remove();
     };
 
-    const init = () => {
+    const removeButton = () => {
         const button = document.querySelector(".js-button");
+        button.remove();
+
+    }
+
+    const init = () => {
         const secondButton = document.querySelector(".js-secondButton");
 
-        button.addEventListener("click", removeWelcomeText);
+        button.addEventListener("click", removeWelcomeText, removeButton);
         secondButton.addEventListener("click", () => {
-            changeTextButton(secondButton);
+            toggleButtonText(secondButton);
             changeText();
         });
-
-
 
         welcome();
     }
