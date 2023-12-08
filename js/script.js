@@ -22,18 +22,15 @@
     const removeWelcomeText = () => {
         const welcomeText = document.querySelector(".js-welcomeText");
         welcomeText.remove();
-    };
-
-    const removeButton = () => {
         const button = document.querySelector(".js-button");
         button.remove();
+    };
 
-    }
 
     const init = () => {
         const secondButton = document.querySelector(".js-secondButton");
 
-        button.addEventListener("click", removeWelcomeText, removeButton);
+        button.addEventListener("click", removeWelcomeText);
         secondButton.addEventListener("click", () => {
             toggleButtonText(secondButton);
             changeText();
